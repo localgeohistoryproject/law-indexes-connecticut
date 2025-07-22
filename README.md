@@ -18,6 +18,7 @@ The terms used in the law indexes were drawn from Source Works that were written
 
 - reflect racist, sexist, ableist, misogynistic/misogynoir, and xenophobic opinions and attitudes;
 - be discriminatory towards or exclude diverse views on sexuality, gender, religion, and more;
+- include graphic content of historical events such as violent death, medical procedures, crime, wars/terrorist acts, natural disasters, and more; or
 - demonstrate bias and exclusion in the subjects documented.
 
 ## Using tab-separated values (TSV) files
@@ -47,9 +48,9 @@ U.S. Copyright Office. *Compendium of U.S. Copyright Office Practices,* 3rd ed. 
 The following is a general methodology for how the law indexes were derived from the Source Works.
 
 - Once images are acquired, they will generally go through one of the following:
-  - For images personally digitized from hardcopy, the quality will be improved using ScanTailor, and then combined as PDFs.
+  - For images personally digitized from hard copy, the quality will be improved using ScanTailor, and then combined as PDFs.
   - For JPEG 2000 files acquired, they are converted to PDFs.
-  - For PDF files acquired from Online Versions, the original image files are extracted and then re-combined as PDFs to remove any OCR.
+  - For PDF files acquired from Online Versions, the original image files may optionally be extracted and then re-combined as PDFs to remove any OCR.
 - The PDFs are then OCR'd using [Amazon Textract](https://aws.amazon.com/pm/textract/). The files are uploaded using the [Bulk Document Uploader](https://docs.aws.amazon.com/textract/latest/dg/bulk-uploader-best-practices.html) and processed using the Detect Document Text API. This process returns a ZIP container for each file containing a text file, a CSV file, and a JSON file.
   - **Warning:** If the uploaded PDF is too large, it may not return the JSON file in the ZIP container, requiring the document to be broken down and re-uploaded in smaller pieces in order to follow the next steps.
 - The JSON files are run through a PHP script, which finds any LINE BlockType entries, and returns the Page, Text, and the X and Y coordinates for the Geometry Polygon for each line in a delimited file. To simplify the coordinates, they are multiplied by 1000 and then rounded as integers. (In future steps, these LINE BlockType rows will be referred to as data points.)

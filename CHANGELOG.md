@@ -2,8 +2,13 @@
 
 ## [Unreleased]
 
+### Added
+
+- to README, Harmful Content: an additional sentence regarding graphic content.
+
 ### Fixed
 
+- Minor spelling and stylistic corrections.
 - README Citation that included a removed federal government link to use Wayback Machine.
 - README Citation to Hirtle to cite exact date.
 
