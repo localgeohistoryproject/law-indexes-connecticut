@@ -1,10 +1,17 @@
 # Changelog
 
-## [Unreleased]
+## [1.2.0] - 2026-02-01
 
 ### Added
 
 - to README, Harmful Content: an additional sentence regarding graphic content.
+- to README, Summary: disclaimer about not being an official publication.
+
+### Changed
+
+- Index Volume field to use Coverage instead of year published.
+- Moved Source Works table to separate file.
+- TSV file folder and name to accommodate one file per volume in volume type folders.
 
 ### Fixed
 
@@ -38,7 +45,7 @@
 
 - Public release of the Law Indexes: Connecticut repository.
 
-[Unreleased]: https://github.com/localgeohistoryproject/law-indexes-connecticut/compare/v1.1.0...develop
+[1.2.0]: https://github.com/localgeohistoryproject/law-indexes-connecticut/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/localgeohistoryproject/law-indexes-connecticut/compare/v1.0.1...v1.1.0
 [1.0.1]: https://github.com/localgeohistoryproject/law-indexes-connecticut/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/localgeohistoryproject/law-indexes-connecticut/releases/tag/v1.0.0
