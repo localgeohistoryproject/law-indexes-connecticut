@@ -4,6 +4,7 @@
 
 ### Added
 
+- Citation Bill Type and Citation Bill Number columns.
 - to README, Harmful Content: an additional sentence regarding graphic content.
 - to README, Summary: disclaimer about not being an official publication.
 
